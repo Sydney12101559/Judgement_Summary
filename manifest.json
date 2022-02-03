@@ -1,0 +1,34 @@
+{
+    "manifest_version" :2,
+    "version":"0.2",
+    "name": "Indian Kanoon Citation",
+    "content_scripts":[
+        {
+            "matches":[
+                "https://indiankanoon.org/doc/*"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background":{
+        "scripts":["background.js"]
+    },
+    "permissions":[
+        "https://indiankanoon.org/doc/*"
+    ],
+    "browser_action":{
+        "default_popup" : "popup/index.html",
+        "default_title": "Get Summary",
+        "default_icon":"Assets/cite_white.png"
+    },
+    "commands": {
+        "_execute_browser_action": {
+          "suggested_key": {
+            "windows": "Ctrl+Shift+Y",
+            "mac": "Command+Shift+Y",
+            "chromeos": "Ctrl+Shift+U",
+            "linux": "Ctrl+Shift+J"
+          }
+        }
+      }
+}

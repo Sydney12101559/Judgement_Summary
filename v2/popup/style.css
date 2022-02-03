@@ -1,0 +1,39 @@
+
+body {
+  width: 100%
+  font: Georgia;
+  
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+   font-size: 12px;
+font-family: Georgia;
+height: 94px; 
+width: 100%; 
+border-collapse: collapse; 
+border-style: solid; 
+border-color: #FAFEFF;
+  
+  
+}
+th,
+td {
+  padding: 10px 10px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #F4ECF7;
+}
+h5 {
+
+  text-transform: uppercase;
+
+}
+
+table:last-child {
+  border-width: 5px;
+  border-style: solid ;
+  border-color: white ;
+  background-color:white;
+}
+
