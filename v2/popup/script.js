@@ -49,6 +49,19 @@ function updatePopUp(summary) {
             }
           });
     });
+    
+    var oscolaButton = document.getElementById("oscola_button");
+    String(title.style.fontStyle = "italic");
+
+    oscolaButton.addEventListener('click', function(event) { // Listening to if the copy button is pressed
+        console.log('Oscola Button Clicked');
+        var oscolatext = summary.title.italics() + " ["  + summary.year + "] " + summary.citation;
+        navigator.permissions.query({name: "clipboard-write"}).then(result => {
+            if (result.state == "granted" || result.state == "prompt") {
+                navigator.clipboard.writeText(oscolatext); //Copying Oscola citation to Clipboard
+            }
+          });
+    });
 
     document.addEventListener('keypress', function(e) {
         if (e.code == "KeyC"){
